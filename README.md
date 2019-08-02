@@ -23,3 +23,17 @@ foo = {
 
 assert DictDig(subject).dig("foo[2][0]") == "banana"
 </pre>
+
+Scan
+<pre>
+foo = {
+				"foo": [
+						"apple",
+						"orange", [
+								"banana", "pineapple"
+						]
+				]
+			}
+
+assert DictDig(subject).scan("orange") == [ "banana", "pineapple" ]
+</pre>

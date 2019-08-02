@@ -16,3 +16,7 @@ class DictDig:
             return default
         else:
             return current_node
+
+    def scan(self, path, default=None):
+       raise NotImplemented
+
