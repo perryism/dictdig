@@ -8,5 +8,7 @@ class ExtractorStrategy:
     def strategy(partial_path):
         if re.search('(?<=\[)\d+(?=])', partial_path):
             return ListExtractor(partial_path)
+        elif partial_path.endswith("[]"):
+            raise NotImplemented
         else:
             return NameExtractor(partial_path)

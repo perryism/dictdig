@@ -28,6 +28,7 @@ class DictDigTest(unittest.TestCase):
         self.assertEqual(dig.dig("foo[0]"), "apple")
         self.assertEqual(dig.dig("foo[1]"), "orange")
         self.assertEqual(dig.dig("foo[2].yellow[0]"), "banana")
+        self.assertEqual(dig.dig("foo[].yellow"), "banana")
 
     def test_dig_nested_list(self):
         subject = {
